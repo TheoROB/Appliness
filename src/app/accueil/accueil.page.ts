@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from "../shared/authentication-service";
 
 @Component({
   selector: 'app-accueil',
@@ -8,14 +9,13 @@ import { Router } from '@angular/router';
 })
 export class AccueilPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(    
+    public authService: AuthenticationService,
+    public router: Router
+    ) 
+    { }
 
   ngOnInit() {
-  }
-
-  logout() {
-    localStorage.removeItem("session");
-    this.router.navigate(['/login']).then(() => {window.location.reload()});
   }
 
 }

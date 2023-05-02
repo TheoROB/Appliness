@@ -1,0 +1,57 @@
+<ion-content>
+  <ion-grid class="grid2">
+    <div>   
+      <ion-col>
+        <img src="./assets/icon/personnage.png">
+      </ion-col>
+    </div>
+  </ion-grid>
+  <ion-slide>
+    <div class="contaier-register">
+      <ion-grid>
+        <ion-col class="img-container-logo">
+          <img src="./assets/icon/logo.png">
+        </ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <form>    
+                <ion-item lines="full">
+                  <ion-icon name="person" class="icon-register"></ion-icon>
+                  <ion-input type="email" #email required placeholder="Adresse mail"></ion-input>
+                </ion-item> 
+                <ion-item lines="full">
+                  <ion-icon name="lock-open" class="icon-register"></ion-icon>
+                  <ion-input type="password" #password required required placeholder="Mot de passe"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-icon name="lock-closed" class="icon-register"></ion-icon>
+                  <ion-input type="password" #passwordVerif required placeholder="Confirmer mot de passe"></ion-input>
+                </ion-item>
+                <ion-row>
+                  <ion-col> 
+                    <ion-button type="submit" color="success" (click)="signUp(email, password, passwordVerif)" expand="block">S'enregistrer</ion-button>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>
+                      <ion-label>
+                          <h3></h3>
+                          <p>Déjà inscrit? <a (click)="login()">C'est ici</a></p>
+                      </ion-label>
+                  </ion-col>
+              </ion-row>
+              </form>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-slide>
+  <div class="contaier-google-register">
+    <p>
+      <ion-icon name="logo-google" class="icon-login"></ion-icon>
+      <a href=''>S'incrire avec google</a>
+    </p>
+</div>
+</ion-content>

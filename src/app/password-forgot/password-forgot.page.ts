@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../shared/authentication-service';
 
 @Component({
   selector: 'app-password-forgot',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PasswordForgotPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public authService: AuthenticationService) { }
 
   ngOnInit() {
   }
@@ -31,7 +32,7 @@ export class PasswordForgotPage implements OnInit {
   }
 
   login() {
-    this.router.navigate(['/login']).then(() => {window.location.reload()})
+    this.router.navigate(['/login']);
   }
 
 }
