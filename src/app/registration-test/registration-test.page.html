@@ -1,6 +1,6 @@
 <ion-content>
   <ion-grid class="grid2">
-    <div>   
+    <div>
       <ion-col>
         <img src="./assets/icon/personnage.png">
       </ion-col>
@@ -15,11 +15,15 @@
         <ion-row>
           <ion-col>
             <ion-list>
-              <form>    
+              <form>
+                <ion-item lines="full">
+                  <ion-icon name="person" class="icon-register"></ion-icon>
+                  <ion-input type="text" #displayName required placeholder="Pseudonyme"></ion-input>
+                </ion-item>
                 <ion-item lines="full">
                   <ion-icon name="person" class="icon-register"></ion-icon>
                   <ion-input type="email" #email required placeholder="Adresse mail"></ion-input>
-                </ion-item> 
+                </ion-item>
                 <ion-item lines="full">
                   <ion-icon name="lock-open" class="icon-register"></ion-icon>
                   <ion-input type="password" #password required required placeholder="Mot de passe"></ion-input>
@@ -29,8 +33,8 @@
                   <ion-input type="password" #passwordVerif required placeholder="Confirmer mot de passe"></ion-input>
                 </ion-item>
                 <ion-row>
-                  <ion-col> 
-                    <ion-button type="submit" color="success" (click)="signUp(email, password, passwordVerif)" expand="block">S'enregistrer</ion-button>
+                  <ion-col>
+                    <ion-button type="submit" color="success" (click)="signUp(email, password, passwordVerif, displayName)" expand="block">S'enregistrer</ion-button>
                   </ion-col>
                 </ion-row>
                 <ion-row>

@@ -1,0 +1,128 @@
+.carré1 {
+  margin: auto;
+  margin-top: 50px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 2px #21BA70;
+}
+
+.carré2 {
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 2px #21BA70;
+}
+
+ion-button{
+  margin-top: 30px;
+  padding-left: 250px;
+}
+
+#cercle1{
+  margin-left: 150px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #2dd36f;;
+}
+#cercle2, #cercle3{
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: gainsboro;
+}
+#cercle4{
+  margin-left: 150px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: gainsboro;
+}
+#cercle5{
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #2dd36f;;
+}
+#cercle6 {
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: gainsboro;
+}
+#cercle7{
+  margin-left: 150px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: gainsboro;
+}
+#cercle8{
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: gainsboro;
+}
+#cercle9{
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #2dd36f;;
+}
+
+.question1, .question2, .question3, .question4 {
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 3px 3px #21BA70;
+}
+
+.response1, .response2, .response3, .response4 {
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  width: 90%;
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 1px 1px #21BA70;
+}
+
+.emote1, .emote2, .emote3 {
+  width : 150px;
+  margin: auto;
+  margin-top: 30px;
+  height : 150px;
+}

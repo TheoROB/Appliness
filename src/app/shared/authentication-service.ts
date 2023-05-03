@@ -7,7 +7,6 @@ import {
   AngularFirestore,
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
-import { retry } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -80,7 +79,7 @@ export class AuthenticationService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['/accueil']);
+          this.router.navigate(['/explain']);
         });
         this.SetUserData(result.user);
       })

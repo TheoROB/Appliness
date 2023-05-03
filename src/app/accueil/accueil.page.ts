@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthenticationService } from "../shared/authentication-service";
+import {AngularFireAuth} from "@angular/fire/compat/auth";
 
 @Component({
   selector: 'app-accueil',
@@ -9,13 +9,12 @@ import { AuthenticationService } from "../shared/authentication-service";
 })
 export class AccueilPage implements OnInit {
 
-  constructor(    
-    public authService: AuthenticationService,
-    public router: Router
-    ) 
-    { }
+  constructor(public authService: AuthenticationService, public ngFireAuth: AngularFireAuth) { }
 
   ngOnInit() {
+    this.ngFireAuth.currentUser.then((user: any) => {
+      console.log(user);
+      });
   }
 
 }

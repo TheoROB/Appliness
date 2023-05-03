@@ -1,0 +1,129 @@
+<ion-content [fullscreen]="true">
+  <div *ngIf="switchNumber === 0">
+    <ion-row>
+      <ion-col>
+        <ion-label>
+          <h1 style="text-align: center; color: #2dd36f">Transmettre du bonheur</h1>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="carré1">
+        Je suis heureux que tu rejoignes l’aventure Appliness ! <br>
+        Je vais t'expliquer rapidement le but de cette application et comment elle fonctionne 👇 <br>
+        Avec cette aplication, nous souhaitons répendre la bonne humeur autour de vous et avoir un vrai impact pour les causes qui vous tiennent à coeur 🥰
+      </div>
+    </ion-row>
+    <ion-row>
+      <div class="carré2">
+        Avec Appliness, partagez de bonnes actions autour de vous et obtenez des récompenses ! Ramasser des déchets, aider des personnes âgées, et bien d'autres choses afin de réaliser des dons dans les associations que vous chérissez.<br>
+        Tu pourras même échanger avec la communauté et faire de belles rencontres 😇 <br>
+        Maintenant, swipe vers la droite pour passer toutes les étapes fonctionnelles 👉
+      </div>
+    </ion-row>
+    <ion-row>
+      <div id="cercle1"></div>
+      <div id="cercle2"></div>
+      <div id="cercle3"></div>
+    </ion-row>
+    <ion-button (click)="switch()" color ="success" shape="round">Suivant</ion-button>
+  </div>
+  <div *ngIf="switchNumber === 1">
+    <form>
+      <ion-row>
+        <div class="question1">
+          <h5>Comment peut-on t’aider ?</h5>
+        </div>
+        <div class="response1">
+          <ion-item>
+            <ion-select placeholder="Choisir dans la liste" required #action>
+              <ion-select-option value="aide">Proposer mon aide</ion-select-option>
+              <ion-select-option value="autres">Aider les autres</ion-select-option>
+              <ion-select-option value="deux">Les deux</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="question2">
+          <h5>Ta tranche d’âge ?</h5>
+        </div>
+        <div class="response2">
+          <ion-item>
+            <ion-select placeholder="Choisir dans la liste" required #age>
+              <ion-select-option value="mineur">- 18</ion-select-option>
+              <ion-select-option value="jeune">18 - 25</ion-select-option>
+              <ion-select-option value="mi-jeune">25 - 40</ion-select-option>
+              <ion-select-option value="senior">40 +</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="question3">
+          <h5>Où habites-tu ?</h5>
+        </div>
+        <div class="response3">
+          <ion-item>
+            <ion-input type="text" #departement required placeholder="Département (exemple: 31)"></ion-input>
+          </ion-item>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="question4">
+          <h5>Tes centres d’intérêts ?</h5>
+        </div>
+        <div class="response4">
+          <ion-item>
+            <ion-select placeholder="Choisir dans la liste" required [multiple]="true" #interet>
+              <ion-select-option value="Sport">Sport</ion-select-option>
+              <ion-select-option value="Musique">Musique</ion-select-option>
+              <ion-select-option value="Cinéma">Cinéma</ion-select-option>
+              <ion-select-option value="Jeux-vidéos">Jeux-vidéos</ion-select-option>
+              <ion-select-option value="Danse">Danse</ion-select-option>
+              <ion-select-option value="Historique">Historique</ion-select-option>
+              <ion-select-option value="Litterature">Litterature</ion-select-option>
+              <ion-select-option value="Nature">Nature</ion-select-option>
+              <ion-select-option value="Autres">Autres</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </ion-row>
+        <ion-row>
+          <div id="cercle4"></div>
+          <div id="cercle5"></div>
+          <div id="cercle6"></div>
+        </ion-row>
+      <ion-button (click)="info(action, age, departement, interet)" color ="success" shape="round">Suivant</ion-button>
+    </form>
+  </div>
+  <div *ngIf="switchNumber === 2">
+    <ion-row>
+      <div class="emote1">
+        <ion-col>
+          <img src="./assets/icon/content.jpg" (click)="mood('content')">
+        </ion-col>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div class="emote2">
+        <ion-col>
+          <img src="./assets/icon/moyen.jpg" (click)="mood('moyen')">
+        </ion-col>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div class="emote3">
+        <ion-col>
+          <img src="./assets/icon/triste.jpg" (click)="mood('triste')">
+        </ion-col>
+      </div>
+    </ion-row>
+    <ion-row>
+      <div id="cercle7"></div>
+      <div id="cercle8"></div>
+      <div id="cercle9"></div>
+    </ion-row>
+    <ion-button (click)="switch()" color ="success" shape="round">Suivant</ion-button>
+  </div>
+</ion-content>

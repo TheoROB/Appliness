@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { AuthenticationService } from "../shared/authentication-service";
-import { computeStackId } from '@ionic/angular/directives/navigation/stack-utils';
 
 @Component({
   selector: 'app-login-test',
@@ -21,7 +20,10 @@ export class LoginTestPage implements OnInit {
     this.authService.SignIn(email.value, password.value)
       .then((res) => {
         if(this.authService.isEmailVerified) {
-          this.router.navigate(['/accueil']); 
+          if (res.user?.photoURL !== null){
+            return this.router.navigate(['/explain']);
+          }
+          return this.router.navigate(['/accueil']);
         } else {
           window.alert('Email is not verified')
           return false;
