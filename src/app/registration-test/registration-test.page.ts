@@ -16,7 +16,7 @@ export class RegistrationTestPage implements OnInit {
 
   ngOnInit(){}
 
-  signUp(email: any, password: any, passwordVerif: any){
+  signUp(email: any, password: any, passwordVerif: any, displayName: any){
 
     if (password.value != passwordVerif.value)
     {
@@ -26,8 +26,13 @@ export class RegistrationTestPage implements OnInit {
 
     this.authService.RegisterUser(email.value, password.value)
     .then((res) => {
-      // Do something here
-      this.authService.SendVerificationMail()
+
+      res.user?.updateProfile({
+        displayName: displayName.value,
+        photoURL: ""
+      });
+
+      this.authService.SendVerificationMail();
       this.router.navigate(['/verify-email']);
     }).catch((error) => {
       window.alert(error.message)

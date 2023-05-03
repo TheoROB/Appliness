@@ -8,12 +8,8 @@ const routes: Routes = [
 		pathMatch: 'full'
 	},
   {
-    path: 'tab',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
-  {
-    path: 'accueil',
-    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+    path: 'explain',
+    loadChildren: () => import('./explain/explain.module').then(m => m.ExplainPageModule)
   },
   {
     path: 'password-forgot',
@@ -30,7 +26,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login-test/login-test.module').then( m => m.LoginTestPageModule)
+  },  {
+    path: 'accueil',
+    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
   }
+
 
 ];
 @NgModule({
