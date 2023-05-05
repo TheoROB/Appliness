@@ -7,14 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { AccueilPageRoutingModule } from './accueil-routing.module';
 
 import { AccueilPage } from './accueil.page';
+import { NavigationBarComponent } from '../components/navigation-bar/navigation-bar.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AccueilPageRoutingModule
-  ],
-  declarations: [AccueilPage]
+  imports: [CommonModule, FormsModule, IonicModule, AccueilPageRoutingModule],
+  declarations: [AccueilPage, NavigationBarComponent],
 })
 export class AccueilPageModule {}
