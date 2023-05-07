@@ -21,11 +21,11 @@ export class AuthenticationService {
     this.ngFireAuth.onAuthStateChanged(function(user){
       if (user) {
         let userData = user;
-        localStorage.setItem('user', JSON.stringify(userData));
-        JSON.parse(localStorage.getItem('user')!);
+        sessionStorage.setItem('user', JSON.stringify(userData));
+        JSON.parse(sessionStorage.getItem('user')!);
       } else {
-        localStorage.setItem('user', 'null');
-        JSON.parse(localStorage.getItem('user')!);
+        sessionStorage.setItem('user', 'null');
+        JSON.parse(sessionStorage.getItem('user')!);
       }
     });
   }
@@ -60,13 +60,12 @@ export class AuthenticationService {
   }
   // Returns true when user is looged in
   get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user')!);
+    const user = JSON.parse(sessionStorage.getItem('user')!);
     return user !== null ? true : false || user.emailVerified !== false ? true : false;
   }
   // Returns true when user's email is verified
   get isEmailVerified(): boolean {
-    const user = JSON.parse(localStorage.getItem('user')!);
-    console.log(user);
+    const user = JSON.parse(sessionStorage.getItem('user')!);
     return user.emailVerified !== false ? true : false;
   }
   // Sign in with Gmail
@@ -79,7 +78,10 @@ export class AuthenticationService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['/explain']);
+          if (result.user?.photoURL === null){
+            return this.router.navigate(['/explain']);
+          }
+          return this.router.navigate(['/accueil']);
         });
         this.SetUserData(result.user);
       })
@@ -87,7 +89,7 @@ export class AuthenticationService {
         window.alert(error);
       });
   }
-  // Store user in localStorage
+  // Store user in sessionStorage
   SetUserData(user: any) {
     const userRef: AngularFirestoreDocument<any> = this.afStore.doc(
       `users/${user.uid}`
@@ -106,7 +108,8 @@ export class AuthenticationService {
   // Sign-out
   SignOut() {
     return this.ngFireAuth.signOut().then(() => {
-      localStorage.removeItem('user');
+      sessionStorage.removeItem('user');
+      sessionStorage.removeItem("infoUser")
       this.router.navigate(['/login']);
     });
 

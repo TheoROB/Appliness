@@ -12,7 +12,10 @@ export class LoginTestPage implements OnInit {
   constructor(
     public authService: AuthenticationService,
     public router: Router
-  ) {}
+  ) {
+    sessionStorage.removeItem('user');
+    sessionStorage.removeItem("infoUser")
+  }
 
   ngOnInit() {}
 
@@ -20,7 +23,7 @@ export class LoginTestPage implements OnInit {
     this.authService.SignIn(email.value, password.value)
       .then((res) => {
         if(this.authService.isEmailVerified) {
-          if (res.user?.photoURL !== null){
+          if (res.user?.photoURL === null){
             return this.router.navigate(['/explain']);
           }
           return this.router.navigate(['/accueil']);

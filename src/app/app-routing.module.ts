@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login-test/login-test.module').then( m => m.LoginTestPageModule)
-  },  {
+  },
+  {
     path: 'accueil',
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
   }

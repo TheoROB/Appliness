@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import { AuthenticationService } from "../shared/authentication-service";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
 
 @Component({
   selector: 'app-explain',
@@ -11,13 +12,15 @@ import { AuthenticationService } from "../shared/authentication-service";
 export class ExplainPage implements OnInit {
 
   switchNumber: number = 0;
+  informationUsers: Array<any> = [];
 
   constructor(
     public router: Router,
     public ngFireAuth: AngularFireAuth,
-    public authService: AuthenticationService
+    public authService: AuthenticationService,
+    public firestore: AngularFirestore
     )
-    { }
+    {}
 
   ngOnInit() {
   }
@@ -31,27 +34,31 @@ export class ExplainPage implements OnInit {
 
   }
 
-  info (action: any, age: any, departement:any, interet: any)
+  info (action: any, age: any, department:any, interest: any)
   {
-    localStorage.setItem('info',
-      "action: "+action.value+", " +
-      "age: "+age.value+", " +
-      "departement: "+departement.value+", " +
-      "interet: "+interet.value+", "
-    )
+    this.informationUsers = [
+      action.value,
+      age.value,
+      department.value,
+      interest.value
+    ]
 
     this.switch();
   }
 
   mood(mood: string){
-    let info = localStorage.getItem('info');
+    this.informationUsers.push(mood);
     this.ngFireAuth.currentUser.then((user: any) => {
-      user?.updateProfile({
-        photoURL:
-          info + " mood: "+mood
+      this.firestore.collection("informationUsers").add({
+        email: user.email,
+        action: this.informationUsers[0],
+        age: this.informationUsers[1],
+        department: this.informationUsers[2],
+        interest: this.informationUsers[3],
+        mood: this.informationUsers[4],
       });
+      user?.updateProfile({photoURL: "valide"});
     });
-    localStorage.removeItem("info");
     this.switch();
   }
 }

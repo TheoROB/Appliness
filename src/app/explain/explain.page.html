@@ -37,9 +37,9 @@
         <div class="response1">
           <ion-item>
             <ion-select placeholder="Choisir dans la liste" required #action>
-              <ion-select-option value="aide">Proposer mon aide</ion-select-option>
-              <ion-select-option value="autres">Aider les autres</ion-select-option>
-              <ion-select-option value="deux">Les deux</ion-select-option>
+              <ion-select-option value="help">Proposer mon aide</ion-select-option>
+              <ion-select-option value="other">Aider les autres</ion-select-option>
+              <ion-select-option value="two">Les deux</ion-select-option>
             </ion-select>
           </ion-item>
         </div>
@@ -51,9 +51,9 @@
         <div class="response2">
           <ion-item>
             <ion-select placeholder="Choisir dans la liste" required #age>
-              <ion-select-option value="mineur">- 18</ion-select-option>
-              <ion-select-option value="jeune">18 - 25</ion-select-option>
-              <ion-select-option value="mi-jeune">25 - 40</ion-select-option>
+              <ion-select-option value="minor">- 18</ion-select-option>
+              <ion-select-option value="young-adult">18 - 25</ion-select-option>
+              <ion-select-option value="adult">25 - 40</ion-select-option>
               <ion-select-option value="senior">40 +</ion-select-option>
             </ion-select>
           </ion-item>
@@ -76,15 +76,15 @@
         <div class="response4">
           <ion-item>
             <ion-select placeholder="Choisir dans la liste" required [multiple]="true" #interet>
-              <ion-select-option value="Sport">Sport</ion-select-option>
-              <ion-select-option value="Musique">Musique</ion-select-option>
-              <ion-select-option value="Cinéma">Cinéma</ion-select-option>
-              <ion-select-option value="Jeux-vidéos">Jeux-vidéos</ion-select-option>
-              <ion-select-option value="Danse">Danse</ion-select-option>
-              <ion-select-option value="Historique">Historique</ion-select-option>
-              <ion-select-option value="Litterature">Litterature</ion-select-option>
-              <ion-select-option value="Nature">Nature</ion-select-option>
-              <ion-select-option value="Autres">Autres</ion-select-option>
+              <ion-select-option value="sport">Sport</ion-select-option>
+              <ion-select-option value="music">Musique</ion-select-option>
+              <ion-select-option value="cinema">Cinéma</ion-select-option>
+              <ion-select-option value="video-games">Jeux-vidéos</ion-select-option>
+              <ion-select-option value="dance">Danse</ion-select-option>
+              <ion-select-option value="history">Historique</ion-select-option>
+              <ion-select-option value="literature">Litterature</ion-select-option>
+              <ion-select-option value="nature">Nature</ion-select-option>
+              <ion-select-option value="other">Autres</ion-select-option>
             </ion-select>
           </ion-item>
         </div>
@@ -101,21 +101,21 @@
     <ion-row>
       <div class="emote1">
         <ion-col>
-          <img src="./assets/icon/content.jpg" (click)="mood('content')">
+          <img src="./assets/icon/content.jpg" (click)="mood('happy')">
         </ion-col>
       </div>
     </ion-row>
     <ion-row>
       <div class="emote2">
         <ion-col>
-          <img src="./assets/icon/moyen.jpg" (click)="mood('moyen')">
+          <img src="./assets/icon/moyen.jpg" (click)="mood('medium')">
         </ion-col>
       </div>
     </ion-row>
     <ion-row>
       <div class="emote3">
         <ion-col>
-          <img src="./assets/icon/triste.jpg" (click)="mood('triste')">
+          <img src="./assets/icon/triste.jpg" (click)="mood('sad')">
         </ion-col>
       </div>
     </ion-row>
