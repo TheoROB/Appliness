@@ -1,0 +1,28 @@
+<ion-content>
+  <ion-header>
+    <ion-row class="icons">
+      <img src="../../assets/icon/arrow-left-solid.svg" class="back">
+      <img src="../../assets/icon/gear-solid.svg" class="settings">
+    </ion-row>
+    <img src="../../assets/image/bg-assos.png">
+  </ion-header>
+  <ion-row class="title">Mes associations</ion-row>
+  <ion-row>
+    <ion-button fill="clear" (click)="showPreviousPage()" *ngIf="hasPreviousPage()">
+      <ion-icon name="caret-up-outline"></ion-icon>
+    </ion-button>
+  </ion-row>
+  <ion-grid>
+    <ion-row class="ion-justify-content-evenly">
+      <ion-col *ngFor="let image of getDisplayedImages()">
+        <!-- Mettre l'image des assos ici -->
+        {{image}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-row>
+    <ion-button fill="clear" (click)="showNextPage()" *ngIf="hasNextPage()">
+      <ion-icon name="caret-down-outline"></ion-icon>
+    </ion-button>
+  </ion-row>
+</ion-content>

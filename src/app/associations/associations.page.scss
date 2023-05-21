@@ -1,0 +1,48 @@
+ion-header {
+    position: relative;
+    .icons {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+
+        .settings,
+        .back {
+            height: 30px;
+        }
+    }
+}
+
+.title {
+    margin: 20px 0;
+    color: var(--ion-color-primary);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+ion-row {
+    display: flex;
+    justify-content: center;
+}
+
+ion-grid {
+    padding: 0 20px;
+}
+ion-col {
+    box-shadow: -2px 2px 5px 3px rgba(0, 0, 0, 0.322);
+    border-radius: 15px;
+    margin: 25px;
+    max-width: 40%;
+    aspect-ratio: 1/1;
+
+}
+
+ion-button {
+    margin: -10px;
+}
+ion-icon {
+    color: var(--ion-color-dark-shade);
+
+}

@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'accueil',
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },  {
+    path: 'associations',
+    loadChildren: () => import('./associations/associations.module').then( m => m.AssociationsPageModule)
   }
+
 
 
 ];
