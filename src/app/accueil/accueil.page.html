@@ -4,29 +4,23 @@
   </ion-toolbar>
 </ion-header>-->
 
-<ion-content [fullscreen]="true">
-  <ion-row class="info-row">
-    <ion-title size="large">accueil</ion-title>
-    <ion-col size="2">
-      <img src="./assets/icon/settings.png" />
-    </ion-col>
-  </ion-row>
+<ion-content>
+  <!--<ion-title size="large">accueil</ion-title>-->
+  <div class="parallax-image" [style.background-image]="'url('+myImagePath+')'">
+    <!--<img src="./assets/icon/settings.png" />-->
+    <div class="citation">
+      <h2>Il ne dépend que de vous.</h2>
+    </div>
+    <div class="personnage">
+      <img src="../../assets/icon/personnage.png" />
+    </div>
+  </div>
 
-  <img src="./assets/accueil.png" />
-
-  <h2>Défis du jour</h2>
-  <ion-slides
-    [options]="{ slidesPerView: 'auto', spaceBetween:10 , zoom: false}"
-  >
-    <ion-slide>
+  <div class="main">
+    <div class="bar"></div>
+    <ion-row class="ion-no-padding" *ngFor="let entry of data">
       <ion-col>
-        <ion-label>Pokémon Yellow</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>Mega Man X</ion-label>
-      </ion-col>
-      <ion-col>
-        <ion-label>The Legend of Zelda</ion-label>
+        <h2>{{entry.title}}</h2>
       </ion-col>
     </ion-slide>
   </ion-slides>
@@ -65,6 +59,7 @@
   <ion-button (click)="authService.SignOut()" color="danger" shape="round"
     >déconnexion</ion-button
   >
+
   <app-navigation-bar></app-navigation-bar>
 </ion-content>
 

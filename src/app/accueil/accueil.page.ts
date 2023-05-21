@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from "../shared/authentication-service";
-import {AngularFireAuth} from "@angular/fire/compat/auth";
-import { AngularFirestore } from "@angular/fire/compat/firestore";
-import {count, Observable} from "rxjs";
-import {Router} from "@angular/router";
+import { AuthenticationService } from '../shared/authentication-service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-accueil',
@@ -19,26 +16,38 @@ export class AccueilPage implements OnInit {
     public firestore: AngularFirestore,
     public router: Router
   ) {
-    console.log(sessionStorage.getItem("user"))
+    console.log(sessionStorage.getItem('user'));
     const user = JSON.parse(sessionStorage.getItem('user')!);
-    this.informationUsers = this.firestore.collection("informationUsers").valueChanges();
+    this.informationUsers = this.firestore
+      .collection('informationUsers')
+      .valueChanges();
 
     this.informationUsers.forEach((value) => {
-      value.forEach((infoUser) =>{
+      value.forEach((infoUser) => {
+        myImagePath = '../../assets/accueil.png';
 
-        if (infoUser.email === user.email)
-        {
-          sessionStorage.setItem("infoUser", JSON.stringify(infoUser));
+        data = [
+          {
+            title: 'Défis du jour',
+          },
+          {
+            title: 'Evènements de la semaine',
+          },
+          {
+            title: 'Mes associations',
+          },
+        ];
+
+        if (infoUser.email === user.email) {
+          sessionStorage.setItem('infoUser', JSON.stringify(infoUser));
         }
       });
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  testSession()
-  {
+  testSession() {
     let obj = JSON.parse(sessionStorage.getItem('infoUser')!);
     console.log(obj);
   }
