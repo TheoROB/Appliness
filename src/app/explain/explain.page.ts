@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {AngularFireAuth} from "@angular/fire/compat/auth";
-import { AuthenticationService } from "../shared/authentication-service";
-import { AngularFirestore } from "@angular/fire/compat/firestore";
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthenticationService } from '../shared/authentication-service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-explain',
@@ -10,7 +10,6 @@ import { AngularFirestore } from "@angular/fire/compat/firestore";
   styleUrls: ['./explain.page.scss'],
 })
 export class ExplainPage implements OnInit {
-
   switchNumber: number = 0;
   informationUsers: Array<any> = [];
 
@@ -19,37 +18,32 @@ export class ExplainPage implements OnInit {
     public ngFireAuth: AngularFireAuth,
     public authService: AuthenticationService,
     public firestore: AngularFirestore
-    )
-    {}
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   switch() {
-    if (this.switchNumber === 2)
-    {
-      return this.router.navigate(['/accueil']);
+    if (this.switchNumber === 2) {
+      return this.router.navigate(['/tabnav/accueil']);
     }
     this.switchNumber++;
-
   }
 
-  info (action: any, age: any, department:any, interest: any)
-  {
+  info(action: any, age: any, department: any, interest: any) {
     this.informationUsers = [
       action.value,
       age.value,
       department.value,
-      interest.value
-    ]
+      interest.value,
+    ];
 
     this.switch();
   }
 
-  mood(mood: string){
+  mood(mood: string) {
     this.informationUsers.push(mood);
     this.ngFireAuth.currentUser.then((user: any) => {
-      this.firestore.collection("informationUsers").add({
+      this.firestore.collection('informationUsers').add({
         email: user.email,
         action: this.informationUsers[0],
         age: this.informationUsers[1],
@@ -57,7 +51,7 @@ export class ExplainPage implements OnInit {
         interest: this.informationUsers[3],
         mood: this.informationUsers[4],
       });
-      user?.updateProfile({photoURL: "valide"});
+      user?.updateProfile({ photoURL: 'valide' });
     });
     this.switch();
   }

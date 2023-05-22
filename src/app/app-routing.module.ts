@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'accueil',
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },
+  {
+    path: 'tabnav',
+    loadChildren: () => import('./tabnav/tabnav.module').then( m => m.TabnavPageModule)
   }
 
 
