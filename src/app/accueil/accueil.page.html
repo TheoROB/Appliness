@@ -1,3 +1,4 @@
+<!--
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>accueil</ion-title>
@@ -13,10 +14,57 @@
   <ion-button (click)="authService.SignOut()" color ="danger" shape="round">déconnexion</ion-button>
   <ion-button (click)="testSession()" color ="primary" shape="round">testSession</ion-button>
 </ion-content>
-
+-->
 <!--  exemple affichage information collection
  <ion-item *ngFor="let item of informationUsers | async">
     <ion-label>{{ item.email }} {{ item.age }}</ion-label>
   </ion-item>
-
 -->
+
+<ion-content>
+  <div class="parallax-image" [style.background-image]="'url('+myImagePath+')'">
+    <ion-button fill="clear"
+      ><img src="../../assets/icon/settings.png"
+    /></ion-button>
+    <div class="citation">
+      <h2>Il ne dépend que de vous.</h2>
+    </div>
+    <div class="personnage">
+      <img src="../../assets/icon/personnage.png" />
+    </div>
+  </div>
+  <div class="main">
+    <div class="bar"></div>
+    <ion-row class="ion-no-padding" *ngFor="let entry of data">
+      <ion-col>
+        <h2>{{entry.title}}</h2>
+      </ion-col>
+      <ion-slides [options]="{ slidesPerView: '3', spaceBetween: 10}">
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Défis #1</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>Pokémon Yellow</ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Défis #2</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>Mega Man X</ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Défis #3</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>The Legend of Zelda</ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </div>
+</ion-content>
