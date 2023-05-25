@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../shared/authentication-service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { AuthenticationService } from '../shared/authentication-service';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { count, Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accueil',
@@ -11,6 +12,20 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 })
 export class AccueilPage implements OnInit {
   informationUsers: Observable<any[]>;
+
+  myImagePath = '../../assets/accueil.png';
+
+  data = [
+    {
+      title: 'Défis du jour',
+    },
+    {
+      title: 'Evènements de la semaine',
+    },
+    {
+      title: 'Mes associations',
+    },
+  ];
 
   constructor(
     public authService: AuthenticationService,
@@ -26,20 +41,6 @@ export class AccueilPage implements OnInit {
 
     this.informationUsers.forEach((value) => {
       value.forEach((infoUser) => {
-        myImagePath = '../../assets/accueil.png';
-
-        data = [
-          {
-            title: 'Défis du jour',
-          },
-          {
-            title: 'Evènements de la semaine',
-          },
-          {
-            title: 'Mes associations',
-          },
-        ];
-
         if (infoUser.email === user.email) {
           sessionStorage.setItem('infoUser', JSON.stringify(infoUser));
         }
