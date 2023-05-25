@@ -1,7 +1,5 @@
 <ion-content>
-  <!--<ion-title size="large">accueil</ion-title>-->
   <div class="parallax-image" [style.background-image]="'url('+myImagePath+')'">
-    <!--<img src="./assets/icon/settings.png" />-->
     <ion-button fill="clear"
       ><img src="./assets/icon/settings.png"
     /></ion-button>
@@ -51,6 +49,24 @@
     </ion-row>
   </div>
 </ion-content>
+
+<!--
+  <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>accueil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">accueil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button (click)="authService.SignOut()" color ="danger" shape="round">déconnexion</ion-button>
+  <ion-button (click)="testSession()" color ="primary" shape="round">testSession</ion-button>
+</ion-content>
+-->
 
 <!--  exemple affichage information collection
  <ion-item *ngFor="let item of informationUsers | async">

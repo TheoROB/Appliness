@@ -1,6 +1,6 @@
-import { Component,OnInit } from '@angular/core';
-import { Router } from "@angular/router";
-import { AuthenticationService } from "../shared/authentication-service";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../shared/authentication-service';
 
 @Component({
   selector: 'app-login-test',
@@ -8,32 +8,33 @@ import { AuthenticationService } from "../shared/authentication-service";
   styleUrls: ['./login-test.page.scss'],
 })
 export class LoginTestPage implements OnInit {
-
   constructor(
     public authService: AuthenticationService,
     public router: Router
   ) {
     sessionStorage.removeItem('user');
-    sessionStorage.removeItem("infoUser")
+    sessionStorage.removeItem('infoUser');
   }
 
   ngOnInit() {}
 
   logIn(email: any, password: any) {
-    this.authService.SignIn(email.value, password.value)
+    this.authService
+      .SignIn(email.value, password.value)
       .then((res) => {
-        if(this.authService.isEmailVerified) {
-          if (res.user?.photoURL === null){
+        if (this.authService.isEmailVerified) {
+          if (res.user?.photoURL === null) {
             return this.router.navigate(['/explain']);
           }
-          return this.router.navigate(['/accueil']);
+          return this.router.navigate(['/tabnav/accueil']);
         } else {
-          window.alert('Email is not verified')
+          window.alert('Email is not verified');
           return false;
         }
-      }).catch((error) => {
-        window.alert(error.message)
       })
+      .catch((error) => {
+        window.alert(error.message);
+      });
   }
 
   forgot() {

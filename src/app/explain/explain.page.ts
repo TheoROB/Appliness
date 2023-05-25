@@ -24,7 +24,7 @@ export class ExplainPage implements OnInit {
 
   switch() {
     if (this.switchNumber === 2) {
-      return this.router.navigate(['/accueil']);
+      return this.router.navigate(['/tabnav/accueil']);
     }
     this.switchNumber++;
   }
