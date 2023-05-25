@@ -18,7 +18,7 @@ export class AuthenticationService {
     public router: Router,
     public ngZone: NgZone
   ) {
-    this.ngFireAuth.onAuthStateChanged(function(user){
+    this.ngFireAuth.onAuthStateChanged(function (user) {
       if (user) {
         let userData = user;
         sessionStorage.setItem('user', JSON.stringify(userData));
@@ -61,7 +61,11 @@ export class AuthenticationService {
   // Returns true when user is looged in
   get isLoggedIn(): boolean {
     const user = JSON.parse(sessionStorage.getItem('user')!);
-    return user !== null ? true : false || user.emailVerified !== false ? true : false;
+    return user !== null
+      ? true
+      : false || user.emailVerified !== false
+      ? true
+      : false;
   }
   // Returns true when user's email is verified
   get isEmailVerified(): boolean {
@@ -78,10 +82,10 @@ export class AuthenticationService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          if (result.user?.photoURL === null){
+          if (result.user?.photoURL === null) {
             return this.router.navigate(['/explain']);
           }
-          return this.router.navigate(['/accueil']);
+          return this.router.navigate(['/tabnav/accueil']);
         });
         this.SetUserData(result.user);
       })
@@ -109,9 +113,8 @@ export class AuthenticationService {
   SignOut() {
     return this.ngFireAuth.signOut().then(() => {
       sessionStorage.removeItem('user');
-      sessionStorage.removeItem("infoUser")
+      sessionStorage.removeItem('infoUser');
       this.router.navigate(['/login']);
     });
-
   }
 }
