@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../shared/authentication-service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthenticationService } from '../shared/authentication-service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-accueil',
