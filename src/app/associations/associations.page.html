@@ -16,7 +16,7 @@
     <ion-row class="ion-justify-content-evenly">
       <ion-col *ngFor="let image of getDisplayedImages()">
         <!-- Mettre l'image des assos ici -->
-        {{image}}
+        <img [src]="image">
       </ion-col>
     </ion-row>
   </ion-grid>

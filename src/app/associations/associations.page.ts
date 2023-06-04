@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./associations.page.scss'],
 })
 export class AssociationsPage implements OnInit {
-  images: string[] = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'çàuàçu', 'eryfzseyz', 'iuiuyiuy', 'iuhyiuy']; // Vos images
+  images: string[] = ['../../assets/image/bg-assos.png', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg', 'image6.jpg', 'image7.jpg', 'image8.jpg', 'çàuàçu', 'eryfzseyz', 'iuiuyiuy', 'iuhyiuy']; // Vos images
   imagesPerPage = 4; // Nombre d'images à afficher par page
   currentPage = 0; // Page actuelle
 
