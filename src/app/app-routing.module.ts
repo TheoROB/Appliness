@@ -3,29 +3,42 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-		path: '',
-		redirectTo: 'login',
-		pathMatch: 'full'
-	},
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
   {
     path: 'explain',
-    loadChildren: () => import('./explain/explain.module').then(m => m.ExplainPageModule)
+    loadChildren: () =>
+      import('./explain/explain.module').then((m) => m.ExplainPageModule),
   },
   {
     path: 'password-forgot',
-    loadChildren: () => import('./password-forgot/password-forgot.module').then( m => m.PasswordForgotPageModule)
+    loadChildren: () =>
+      import('./password-forgot/password-forgot.module').then(
+        (m) => m.PasswordForgotPageModule
+      ),
   },
   {
     path: 'register',
-    loadChildren: () => import('./registration-test/registration-test.module').then( m => m.RegistrationTestPageModule)
+    loadChildren: () =>
+      import('./registration-test/registration-test.module').then(
+        (m) => m.RegistrationTestPageModule
+      ),
   },
   {
     path: 'verify-email',
-    loadChildren: () => import('./verify-email/verify-email.module').then( m => m.VerifyEmailPageModule)
+    loadChildren: () =>
+      import('./verify-email/verify-email.module').then(
+        (m) => m.VerifyEmailPageModule
+      ),
   },
   {
     path: 'login',
-    loadChildren: () => import('./login-test/login-test.module').then( m => m.LoginTestPageModule)
+    loadChildren: () =>
+      import('./login-test/login-test.module').then(
+        (m) => m.LoginTestPageModule
+      ),
   },
   {
     path: 'accueil',
@@ -34,14 +47,19 @@ const routes: Routes = [
   {
     path: 'event',
     loadChildren: () => import('./event/event.module').then( m => m.EventPageModule)
-  }
+  },
+  {
+    path: 'tabnav',
+    loadChildren: () =>
+      import('./tabnav/tabnav.module').then((m) => m.TabnavPageModule),
+  },
 
 
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
