@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'accueil',
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },
+  {
+    path: 'event',
+    loadChildren: () => import('./event/event.module').then( m => m.EventPageModule)
   }
 
 
