@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2{
+  color: green;
+}
+
+.parallax-image{
+  display: block;
+  width: 100%;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 220px 190px, contain;
+  background-color: white;
+}
+
+.main{
+  display: block;
+  background-color: rgb(232, 164, 241);
+
+  h1{
+    margin: 0;
+    text-align: center;
+  }
+  h2{
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+.bar {
+  display: block;
+  margin: 5px auto;
+  width:45px;
+	height:3px;
+  border-radius: 45px;
+	background:#545454;
+}
+
+.today-challenge{
+  ion-col {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 0.5em;
+    height: 40px;
+    color: black;
+  }
+}
+
+ion-button {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+}
+
+ion-card {
+  margin: 10px auto;
+  width: 90%;
+  border-radius: 15px;
+}
+
