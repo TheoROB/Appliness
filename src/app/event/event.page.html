@@ -1,12 +1,22 @@
+<ion-header class="header">
+  <ion-toolbar class="header-toolbar">
+    <ion-buttons slot="start">
+      <ion-icon name='arrow-back'></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end" style="opacity: 1!important;">
+      <ion-icon name="settings-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true" class="body">
   <ion-img
-    src="./assets/icon/People_celebrating_Purim_day_pana_1.svg"
-    style="height: 25%; border: none;"
-    class="img-background"
+  src="./assets/icon/People_celebrating_Purim_day_pana_1.svg"
+  class="img-background"
   ></ion-img>
-  <ion-col>
+  <ion-col class="pageContent">
     <ion-header>
-      <ion-title> Évènements </ion-title>
+      <ion-title style="color: #21BA70; font-size: 22 !important;"> Évènements </ion-title>
     </ion-header>
 
     <ion-searchbar placeholder="Rechercher"></ion-searchbar>

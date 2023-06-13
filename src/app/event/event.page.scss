@@ -1,7 +1,44 @@
-.img-background {
-    position: relative;
+.body{
+  display: flex;
 }
 
-.body {
-    
+ion-content{
+
+  --ion-background-color:#F9F9F9;
 }
+
+.pageContent{
+  border: solid red 2px;
+  background-color: #FFFFFF !important;
+}
+
+ion-toolbar {
+  --ion-toolbar-background-color: transparent;
+  --ion-toolbar-text-color: white;
+  }
+
+.header{
+    position: fixed;
+    
+  }
+
+.header-toolbar {
+
+  }
+
+.img-background{
+    // width: 100%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+// .header-transparent {
+//     --ion-background-color: transparent;
+//     --ion-toolbar-background: transparent;
+//     --ion-toolbar-opacity: 0.9; /* Vous pouvez ajuster cette valeur pour contrôler l'opacité de l'en-tête */
+//     --ion-toolbar-border-color: transparent;
+//     --ion-toolbar-border-width: 0;
+//   }
