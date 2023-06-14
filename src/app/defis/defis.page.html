@@ -7,38 +7,89 @@
   <div class="main">
     <h1>Défis</h1>
     <div class="bar"></div>
-    <div class="today-challenge">
+    <div class="score-challenge">
       <ion-card>
         <ion-card-content>
           <ion-grid>
             <ion-row>
-              <ion-col><p>Score :</p></ion-col>
-              <ion-col size="auto"><p>150 pts</p></ion-col>
+              <ion-col>
+                <p>Score :</p>
+              </ion-col>
+              <ion-col size="auto">
+                <p>150 pts</p>
+              </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card-content>
       </ion-card>
     </div>
+
     <h2>Défi du jour</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et nisi non
-      purus vestibulum sodales fermentum sit amet nunc. In turpis felis,
-      consectetur ut erat eget, dapibus cursus elit. In ut leo nec metus
-      dignissim congue sit amet eget mauris. Fusce tincidunt congue turpis non
-      hendrerit. Aenean vitae interdum mi. Nam viverra neque mollis nulla
-      gravida, a gravida enim ullamcorper. In hac habitasse platea dictumst.
-      Morbi accumsan luctus massa, tincidunt finibus augue vulputate vitae.
-    </p>
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid class="today-challenge">
+            <ion-row>
+              <ion-col size="auto">
+                <ion-icon name="close-outline"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <p>Envoie un message pour prendre des nouvelles d’un proche</p>
+              </ion-col>
+              <ion-col size="auto"><p>240 pts</p></ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
     <h2>Défi de la semaine</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et nisi non
-      purus vestibulum sodales fermentum sit amet nunc. In turpis felis,
-      consectetur ut erat eget, dapibus cursus elit. In ut leo nec metus
-      dignissim congue sit amet eget mauris. Fusce tincidunt congue turpis non
-      hendrerit. Aenean vitae interdum mi. Nam viverra neque mollis nulla
-      gravida, a gravida enim ullamcorper. In hac habitasse platea dictumst.
-      Morbi accumsan luctus massa, tincidunt finibus augue vulputate vitae.
-    </p>
-    <h3>wzrsextdrcrftvgybhunj</h3>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid class="weekly-challenge">
+          <ion-row>
+            <ion-col size="auto"
+              ><ion-icon name="close-outline"></ion-icon
+            ></ion-col>
+            <ion-col><p>Privilégier les escaliers</p></ion-col>
+            <ion-col size="auto"><p>40 pts</p></ion-col>
+          </ion-row>
+          <ion-row>
+            <progress-bar [progress]="50"></progress-bar>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid class="weekly-challenge">
+          <ion-row>
+            <ion-col size="auto"
+              ><ion-icon name="close-outline"></ion-icon
+            ></ion-col>
+            <ion-col><p>Privilégier les escaliers</p></ion-col>
+            <ion-col size="auto"><p>40 pts</p></ion-col>
+          </ion-row>
+          <ion-row>
+            <progress-bar [progress]="60"></progress-bar>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-grid class="create-challenge">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <p>Créer un défi</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

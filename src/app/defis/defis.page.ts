@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DefisPage implements OnInit {
   myImagePath = '../../assets/background/defis.png';
 
+  //loadProgress: number = 50;
+
   constructor() {}
 
   ngOnInit() {}
