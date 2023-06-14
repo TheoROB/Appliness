@@ -1,14 +1,3 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar class="headerToolbar">
-    <ion-buttons slot="start">
-      <ion-icon name='arrow-back'></ion-icon>
-    </ion-buttons>
-    <ion-buttons slot="end" style="opacity: 1!important;">
-      <ion-icon name="settings-outline"></ion-icon>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true" class="body">
   <ion-img
   src="./assets/icon/People_celebrating_Purim_day_pana_1.svg"
@@ -28,6 +17,11 @@
         <app-card-event></app-card-event>
         <app-card-event></app-card-event>
         <app-card-event></app-card-event>
+        <ion-icon class="showMoreIcon" name="caret-down-outline"></ion-icon>
+        <ion-button class="createEvent" routerLink="/create-event">
+          <ion-icon class="iconCreateEvent" slot="start" name="add-circle-outline"></ion-icon>
+          Créer un nouvel évènement
+        </ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

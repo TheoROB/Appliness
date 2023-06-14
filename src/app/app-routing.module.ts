@@ -53,6 +53,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabnav/tabnav.module').then((m) => m.TabnavPageModule),
   },
+  {
+    path: 'create-event',
+    loadChildren: () => import('./create-event/create-event.module').then( m => m.CreateEventPageModule)
+  },
 
 
 ];

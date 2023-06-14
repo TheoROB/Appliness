@@ -6,15 +6,6 @@ ion-content{
   --ion-background-color:#F9F9F9;
 }
 
-ion-toolbar {
-  --ion-toolbar-background-color: transparent;
-  --ion-toolbar-text-color: white;
-}
-
-.headerToolbar{
-  --background: none;
-}
-
 .pageContent{
   background: #FFFF !important;
   border-radius: 20px 20px 0px 0px;
@@ -55,4 +46,33 @@ ion-searchbar{
   display: flex;
   flex-direction:column;
   justify-content: center;
+}
+
+ion-icon{
+  width: 50px;
+  height: 50px;
+}
+
+.createEvent{
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  --background:#FFFF;
+  color: black;
+  --box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+  --background-activated: #64CF9B;
+}
+
+.iconCreateEvent{
+  width: 25px;
+  height: 25px;
+}
+
+.showMoreIcon{
+  color: grey;
+  margin-left: 157px;
+}
+
+.showMoreIcon:active{
+  color: black;
 }

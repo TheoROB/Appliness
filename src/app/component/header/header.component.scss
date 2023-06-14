@@ -1,0 +1,21 @@
+ion-header{
+    position: fixed;
+}
+
+ion-toolbar {
+    --ion-toolbar-background-color: transparent;
+    --ion-toolbar-text-color: white;
+}
+
+.headerToolbar{
+    --background: none;
+}
+
+ion-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.iconNav:active{
+    color: #64CF9B;
+}
