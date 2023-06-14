@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardEventComponent  implements OnInit {
 
+  isExpanded = false;
+
+  toggleExpanded() {
+    this.isExpanded = !this.isExpanded;
+  }
+  
   constructor() { }
 
   ngOnInit() {}

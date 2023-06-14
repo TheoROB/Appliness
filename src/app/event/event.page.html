@@ -1,5 +1,5 @@
-<ion-header class="header">
-  <ion-toolbar class="header-toolbar">
+<ion-header class="ion-no-border">
+  <ion-toolbar class="headerToolbar">
     <ion-buttons slot="start">
       <ion-icon name='arrow-back'></ion-icon>
     </ion-buttons>
@@ -14,33 +14,21 @@
   src="./assets/icon/People_celebrating_Purim_day_pana_1.svg"
   class="img-background"
   ></ion-img>
-  <ion-col class="pageContent">
-    <ion-header>
-      <ion-title style="color: #21BA70; font-size: 22 !important;"> Évènements </ion-title>
-    </ion-header>
-
-    <ion-searchbar placeholder="Rechercher"></ion-searchbar>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title> Titre de la carte </ion-card-title>
-      </ion-card-header>
-      <ion-card-content> Contenu de la carte </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title> Titre de la carte </ion-card-title>
-      </ion-card-header>
-      <ion-card-content> Contenu de la carte </ion-card-content>
-    </ion-card>
-    
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title> Titre de la carte </ion-card-title>
-      </ion-card-header>
-      <ion-card-content> Contenu de la carte </ion-card-content>
-    </ion-card>
-    
-  </ion-col>
+  <ion-grid class="pageContent">
+    <ion-row>
+      <ion-col class="searchPart">
+        <h1 class="titre"> Évènements </h1>
+        <ion-img
+        src="../../assets/icon/Line 10.svg"
+        class="imgLine"
+        ></ion-img>
+        <ion-searchbar show-clear-button="focus" placeholder="Rechercher un évènement ..."></ion-searchbar>
+      </ion-col>
+      <ion-col>
+        <app-card-event></app-card-event>
+        <app-card-event></app-card-event>
+        <app-card-event></app-card-event>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

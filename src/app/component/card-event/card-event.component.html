@@ -1,3 +1,25 @@
-<p>
-  card-event works!
-</p>
+<ion-card [class.expanded]="isExpanded">
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto" class="colImageUser">
+        <ion-img src="../../../assets/icon/logo.png" class="imageUser"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-card-content>
+          <ion-card-title>TITRE</ion-card-title>
+          <ion-card-subtitle>Date - Toulouse Esquirol</ion-card-subtitle>
+          <p [hidden]="!isExpanded">
+            Description de la carte.
+          </p>
+          <ion-row>
+            <ion-col>
+              <ion-button class="rejoindreBouton">Rejoindre</ion-button>
+              <ion-button class="voirPlusBouton" (click)="toggleExpanded()">Voir plus</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card> 
+
