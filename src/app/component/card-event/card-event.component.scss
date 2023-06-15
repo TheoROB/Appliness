@@ -2,6 +2,7 @@ ion-card{
     display: flex;
     flex-direction: column;
     box-shadow: -5px 5px 10px 2px rgba(0,0,0,0.2);
+    border-radius: 15px;
 }
 
 .imageUser{
@@ -18,16 +19,20 @@ ion-card{
 
 ion-card-title {
     font-size: 15px;
+    font-family: Inter-SemiBold;
 }
 
 ion-card-subtitle {
     font-size: 10px;
-    font-family: Inter-Regular !important;
+    font-family: Inter-SemiBold;
 }
 
 ion-button{
     width: 84px;
     height: 24px;
+    --border-radius: 15px;
+    font-size: 11px;
+    font-family: Inter-SemiBold;
 }
 
 .voirPlusBouton{
@@ -42,4 +47,8 @@ ion-button{
     --background: #64CF9B;
     --background-activated: #b0e2c9;
     --box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+p{
+    font-family: Inter-Regular;
 }

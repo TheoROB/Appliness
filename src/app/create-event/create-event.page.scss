@@ -1,0 +1,84 @@
+ion-content{
+    --ion-background-color:#F9F9F9;
+}
+
+.pageContent{
+    height: 100%;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 5px;
+    font-size: 16px;
+    font-family: Inter-SemiBold;
+    border-radius: 30px;
+    box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+
+ion-item{
+    border-radius: 30px;
+    box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+.colContent{
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+.titre{
+    display: flex;
+    justify-content: center;
+    color: #21BA70;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-family: Inter-SemiBold;
+    box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+.valideBoutons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+ion-button{
+    width: 84px;
+    height: 24px;
+    --border-radius: 15px;
+    font-size: 11px;
+    font-family: Inter-SemiBold;
+}
+
+.aidesBouton{
+    --background: #E9F9F1;
+    --background-activated: #64CF9B;
+    --color: grey;
+    --box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+.validerPlusBouton{
+    --background: #64CF9B;
+    --background-activated: #b0e2c9;
+    --box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
+}
+
+ion-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.showMoreIcon{
+    color: grey;
+    margin-left: 140px;
+}
+  
+  .showMoreIcon:active{
+    color: black;
+}

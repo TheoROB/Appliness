@@ -7,7 +7,7 @@ ion-content{
 }
 
 .pageContent{
-  background: #FFFF !important;
+  --background: #FFFF;
   border-radius: 20px 20px 0px 0px;
   padding-bottom: 100px;
 }
@@ -38,8 +38,7 @@ ion-content{
 ion-searchbar{
   --background: #FFFF;
   --box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);
-  margin-left: 4px;
-  width: 365px;
+  --border-radius: 15px;
 }
 
 .searchPart{
@@ -55,8 +54,12 @@ ion-icon{
 
 .createEvent{
   width: 100%;
+  height: 50px;
   padding-left: 15px;
   padding-right: 15px;
+  font-size: 15px;
+  font-family: Inter-SemiBold;
+  --border-radius: 15px;
   --background:#FFFF;
   color: black;
   --box-shadow: -3px 4px 10px 2px rgba(0,0,0,0.2);

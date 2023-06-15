@@ -1,35 +1,49 @@
-<ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">Titre</ion-label>
-      <ion-input type="text" placeholder="Écrire ici ..."></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Le lieu</ion-label>
-      <ion-select placeholder="Choisir dans la liste :">
-        <ion-select-option value="lieu1">Lieu 1</ion-select-option>
-        <ion-select-option value="lieu2">Lieu 2</ion-select-option>
-        <ion-select-option value="lieu3">Lieu 3</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">La date</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" placeholder="XX/XX/XXXX ..."></ion-datetime>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Le contenu</ion-label>
-      <ion-textarea rows="5" placeholder="Écrire ici ..."></ion-textarea>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Insérez votre image</ion-label>
-      <ion-input type="file"></ion-input>
-    </ion-item>
-  </ion-list>
-
-  <ion-button expand="full" color="primary">Soumettre</ion-button>
+<ion-content class="ion-padding">
+  <h1 class="titre"> Créer son évènement </h1>
+  <form>
+    <ion-grid class="pageContent" >
+      <ion-row>
+          <ion-col class="colContent">
+            <h2>Le titre</h2>
+            <ion-item>
+              <ion-input
+                [clearInput]="true"
+                placeholder="Écrire ici ..."
+              >
+              </ion-input>
+            </ion-item>
+            <h2>Le lieu</h2>
+            <ion-item>
+              <ion-select placeholder="Choisir dans la liste :">
+                <ion-select-option value="Toulouse">Toulouse</ion-select-option>
+                <ion-select-option value="Albi">Albi</ion-select-option>
+                <ion-select-option value="Pamier">Pamier</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <h2>La date</h2>
+            <ion-item>
+              <ion-input
+                [clearInput]="true"
+                placeholder="XX/XX/XXXX ..."
+              >
+              </ion-input>
+            </ion-item>
+            <h2>Le contenu</h2>
+            <ion-item>
+                <ion-textarea rows="5" placeholder="Écrire ici ..."></ion-textarea>
+            </ion-item>
+            <h2>Insérer une image</h2>
+            <ion-item>
+              <ion-input type="file"></ion-input>
+            </ion-item>
+            <div class="valideBoutons">
+              <ion-button class="aidesBouton">Aides</ion-button>
+              <ion-button class="validerPlusBouton">Valider</ion-button>
+            </div>
+          </ion-col>
+      </ion-row>
+      <ion-icon class="showMoreIcon" name="caret-down-outline"></ion-icon>
+    </ion-grid>
+  </form>
 </ion-content>
 
