@@ -15,11 +15,17 @@ h1, h2{
   background-position: center;
   background-size: 220px 190px, contain;
   background-color: white;
+  ion-button {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+  }
 }
 
 .main{
   display: block;
-  //background-color: rgb(232, 164, 241);
+  height:auto;
+  padding-bottom: 50px;
 
   h1{
     margin: 0;
@@ -135,12 +141,6 @@ h1, h2{
   }
 }
 
-ion-button {
-  position: absolute;
-  top: 20px;
-  right: 5%;
-}
-
 ion-card {
   margin: 20px auto;
   width: 90%;
@@ -152,3 +152,43 @@ ion-icon {
   font-size: 22px;
 }
 
+
+.block {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  border: black;
+
+
+  p{
+    color: black;
+  }
+
+  ion-row {
+    margin: 5px 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    ion-col {
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+
+  ion-row:first-child{
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  ion-row:last-child{
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+ion-modal {
+  --height: auto;
+  --border-radius: 16px;
+}
