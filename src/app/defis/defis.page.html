@@ -1,0 +1,127 @@
+<ion-content [fullscreen]="false">
+  <div class="parallax-image" [style.background-image]="'url('+myImagePath+')'">
+    <ion-button fill="clear">
+      <img src="../../assets/icon/settings.png" />
+    </ion-button>
+  </div>
+  <div class="main">
+    <h1>Défis</h1>
+    <div class="bar"></div>
+    <div class="score-challenge">
+      <ion-card>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <p>Score :</p>
+              </ion-col>
+              <ion-col size="auto">
+                <p>150 pts</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <h2>Défi du jour</h2>
+    <div>
+      <ion-card>
+        <ion-card-content>
+          <ion-grid class="today-challenge">
+            <ion-row>
+              <ion-col size="auto">
+                <ion-icon (click)="setOpen(true)" name="close-outline">
+                </ion-icon>
+              </ion-col>
+              <ion-col>
+                <p>Envoie un message pour prendre des nouvelles d’un proche</p>
+              </ion-col>
+              <ion-col size="auto"><p>240 pts</p></ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <h2>Défi de la semaine</h2>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid class="weekly-challenge">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-icon (click)="setOpen(true)" name="close-outline"></ion-icon>
+            </ion-col>
+            <ion-col><p>Privilégier les escaliers</p></ion-col>
+            <ion-col size="auto"><p>40 pts</p></ion-col>
+          </ion-row>
+          <ion-row>
+            <progress-bar [progress]="50"></progress-bar>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid class="weekly-challenge">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-icon (click)="setOpen(true)" name="close-outline">
+              </ion-icon>
+            </ion-col>
+            <ion-col><p>Privilégier les escaliers</p></ion-col>
+            <ion-col size="auto"><p>40 pts</p></ion-col>
+          </ion-row>
+          <ion-row>
+            <progress-bar [progress]="60"></progress-bar>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-grid class="create-challenge">
+          <ion-row>
+            <ion-col size="auto">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </ion-col>
+            <ion-col>
+              <p>Créer un défi</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <div class="block">
+          <ion-grid>
+            <ion-row>
+              <h2>Êtes vous sur de vouloir modifier votre défi ?</h2>
+            </ion-row>
+            <ion-row>
+              <p>1 crédit restant</p>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-button
+                  style="--background: rgb(33, 186, 112, 0.1); --color: #71867c"
+                  (click)="setOpen(false)"
+                >
+                  Non
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button style="--background: rgb(33, 186, 112, 0.7)">
+                  Oui
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ng-template>
+    </ion-modal>
+  </div>
+</ion-content>

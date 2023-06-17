@@ -49,7 +49,11 @@ const routes: Routes = [
     path: 'tabnav',
     loadChildren: () =>
       import('./tabnav/tabnav.module').then((m) => m.TabnavPageModule),
+  },  {
+    path: 'defis',
+    loadChildren: () => import('./defis/defis.module').then( m => m.DefisPageModule)
   },
+
 ];
 @NgModule({
   imports: [

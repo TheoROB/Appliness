@@ -13,6 +13,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('../accueil/accueil.module').then((m) => m.AccueilPageModule),
       },
+      {
+        path: 'defis',
+        loadChildren: () =>
+          import('../defis/defis.module').then((m) => m.DefisPageModule),
+      },
     ],
   },
 ];

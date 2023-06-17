@@ -1,0 +1,22 @@
+.progress-outer {
+  margin: 10px 0.5em;
+  padding: 3px;
+  text-align: center;
+  background-color: rgba(33, 186, 112, 0.1);
+  border: 1px solid #dcdcdc;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px #888;
+  color: #000;
+}
+.progress-inner {
+  min-width: 15%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgba(33, 186, 112, 0.5);
+
+  p {
+    font: bold 15px/1 sans-serif;
+  }
+}
